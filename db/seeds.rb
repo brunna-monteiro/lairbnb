@@ -85,7 +85,7 @@ file10 = URI.open("https://static.wikia.nocookie.net/disney/images/c/c5/Cinderel
 lair.photo.attach(io: file, filename: "cinderella", content_type: "image/jpg")
 lair.save
 
-user11 = User.create(email: "mother.gothel@gmail.com", password: "123456", first_name: "Mother" last_name: "Gothel")
+user11 = User.create(email: "mother.gothel@gmail.com", password: "123456", first_name: "Mother", last_name: "Gothel")
 
 lair11 = Lair.new(name: "Rapunzel's Tower", user: user11, price: 400, description: "Rapunzel's Tower is a secluded tower hidden deep within the woods outside of the kingdom of Corona. It is hidden in a large rock pit by a cave. The cave leads out into the forest with its opening hidden by a curtain of plants. At the base of the tower is an alternate entrance Mother Gothel used to go in and out of the tower before she took Rapunzel and in the years that she was too young to pull her up, with a hidden trapdoor leading up into the main rooms of the Tower. Over the years, Rapunzel has painted a series of murals in the tower. The tower has several rooms including bedrooms for both Rapunzel and Mother Gothel, a central room which would be the primary location of Rapunzel's gallery, and a staircase leading to an upstairs room.")
 file11 = URI.open("https://static.wikia.nocookie.net/disney/images/9/91/Pascal%27s_Story_concept_13.png/revision/latest/scale-to-width-down/1000?cb=20170831102346")
