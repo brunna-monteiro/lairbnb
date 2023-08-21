@@ -80,7 +80,7 @@ lair.save
 
 user10 = User.create(email: "lady.tremaine@gmail.com", password: "123456", first_name: "Lady", last_name: "Tremaine")
 
-lair10 = Lair.new(name: "Cinderella's Château", user: user10, price: 300, description: "Cinderella's Château was where Cinderella herself and her late father and mother once happily lived. Although it was once a grand and imposing building, it fell into "disrepair" in the years following the death of her father, for her stepmother neglected to care for it. She preferred to squander the family fortune she inherited from her late husband on her daughters, Anastasia and Drizella, spoiling them rotten for over a decade after the death of both girls' stepfather.")
+lair10 = Lair.new(name: "Cinderella's Château", user: user10, price: 300, description: "Cinderella's Château was where Cinderella herself and her late father and mother once happily lived. Although it was once a grand and imposing building, it fell into disrepair in the years following the death of her father, for her stepmother neglected to care for it. She preferred to squander the family fortune she inherited from her late husband on her daughters, Anastasia and Drizella, spoiling them rotten for over a decade after the death of both girls' stepfather.")
 file10 = URI.open("https://static.wikia.nocookie.net/disney/images/c/c5/Cinderella%27s_Ch%C3%A2teau_facade.jpg/revision/latest?cb=20130715230923")
 lair.photo.attach(io: file, filename: "cinderella", content_type: "image/jpg")
 lair.save
