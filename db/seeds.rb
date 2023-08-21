@@ -92,14 +92,14 @@ file11 = URI.open("https://static.wikia.nocookie.net/disney/images/9/91/Pascal%2
 lair.photo.attach(io: file, filename: "rapunzel_tower", content_type: "image/png")
 lair.save
 
-user12 = User.create(email: "queen.grimhilde@gmail.com", password: "123456", first_name: "Queen" last_name: "Grimhilde (Snow White)")
+user12 = User.create(email: "queen.grimhilde@gmail.com", password: "123456", first_name: "Queen", last_name: "Grimhilde (Snow White)")
 
 lair12 = Lair.new(name: "The Queen's Castle", user: user12, price: 1000, description: "Though externally the archetype of a fairy tale castle, this castle's walls hide many dark and arcane secrets. The Queen's Chambers are elaborately decorated to suit her vanity. The Queen rarely seems to leave her chambers; she watches events unfold below her from her window. A spiral staircase leads to the dungeon below.  The Magic Mirror is located behind a blue curtain in a special chamber in the castle. Every morning, the Queen approaches the mirror (sometimes closing the curtains after her, implying that the Mirror is a possession she wishes to keep secret) and asks who the fairest one of all is; when the Mirror names Snow White fairest of all, the jealous Queen plots to do away with her stepdaughter.")
 file12 = URI.open("https://static.wikia.nocookie.net/disney/images/7/73/Queens_Castle_%28evil%29.png/revision/latest/scale-to-width-down/1000?cb=20180217234441")
 lair.photo.attach(io: file, filename: "snow_white", content_type: "image/png")
 lair.save
 
-user13 = User.create(email: "doofenschmirtz@gmail.com", password: "123456", first_name: "Dr. Heinz" last_name: "Doofenshmirtz")
+user13 = User.create(email: "doofenschmirtz@gmail.com", password: "123456", first_name: "Dr. Heinz", last_name: "Doofenshmirtz")
 
 lair13 = Lair.new(name: "Doofenshmirtz Evil Incorporated", user: user13, price: 400, description: "Doofenshmirtz Evil Incorporated, also known as Doofenshmirtz Evil Inc. or Doofenshmirtz Corporation, and later known as Professor Time's Building, is a company owned by the evil scientist Dr. Heinz Doofenshmirtz. Most of the daily operations of the company are run by Doofenshmirtz himself. The main purpose of the company is to assist Dr. Doofenshmirtz in his schemes to conquer the Tri-State Area. It is kind of shaped like Ferb's head, as Phineas commented to Ferb as they prepared to crash into it. (Phineas and Ferb the Movie: Across the 2nd Dimension)")
 file13 = URI.open("https://static.wikia.nocookie.net/disney/images/7/7a/Doofenshmirtz_Evil_Inc._building.jpg/revision/latest?cb=20110918043121")
