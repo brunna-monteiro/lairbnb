@@ -1,2 +1,6 @@
-<h1>Lairs#index</h1>
-<p>Find me in app/views/lairs/index.html.erb</p>
+<h1>Homepage</h1>
+<% @lairs.each do |lair| %>
+  <%= lair.name %>
+  <%= lair.price %>
+  <%= link_to "see more", lair_path(lair) %>
+<% end %>
