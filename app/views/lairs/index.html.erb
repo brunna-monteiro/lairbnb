@@ -9,6 +9,8 @@
   </div>
 </section>
 
-<section class="container">
-  <%= render "card", lairs: @lairs %>
+<section class="container" data-controller="toggle">
+  <div data-action="click->toggle#card" <%= link_to lair_path(lair) %>>
+    <%= render "card", lairs: @lairs %>
+  </div>
 </section>
