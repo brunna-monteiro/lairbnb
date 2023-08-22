@@ -7,3 +7,7 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
+
+// import SearchController from "./controllers/search_controller.js"
+// Stimulus.register("search", SearchController)
+

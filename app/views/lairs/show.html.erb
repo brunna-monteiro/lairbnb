@@ -1,11 +1,30 @@
-<h1><%= @lair.name %></h1>
-<p><%= @lair.price %>€</p>
-<p><%= @lair.description %></p>
 
-<h2>Make a reservation</h2>
-<%= simple_form_for([@lair, @reservation]) do |f| %>
-  <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.submit %>
-<% end %>
-  
+<%# <div style="--gp-section-max-width: 1120px;"></div> %>
+<%= cl_image_tag @lair.photo.key, height: 300, width: 400, crop: :fill %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1><%= @lair.name %></h1>
+      <p><%= @lair.price %> ☠️🍏</p>
+      <p><%= @lair.description %></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Make a reservation</h2>
+      <%= simple_form_for [@lair, @reservation], data: { controller: "datepicker", dates: @lair.reserved_dates.to_json }  do |f| %>
+      <div class="col-md-8">
+        <%= f.input :start_date,
+            as: :string,
+            input_html: { data: { datepicker_target: "start" } } %>
+      </div>
+      <div class="col-md-8">
+        <%= f.input :end_date,
+            as: :string,
+            input_html: { data: { datepicker_target: "end" } } %>
+      </div>
+        <%= f.submit 'Submit', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
