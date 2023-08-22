@@ -10,3 +10,4 @@ export { application }
 
 // import SearchController from "./controllers/search_controller.js"
 // Stimulus.register("search", SearchController)
+
