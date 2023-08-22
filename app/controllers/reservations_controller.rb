@@ -1,4 +1,8 @@
 class ReservationsController < ApplicationController
+  def index
+    @reservations = Reservation.where(user_id: current_user.id)
+  end
+
   def new
     @reservation = Reservation.new
   end
@@ -14,6 +18,7 @@ class ReservationsController < ApplicationController
       render :new
     end
   end
+
 
   private
 
