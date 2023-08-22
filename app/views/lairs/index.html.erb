@@ -1,6 +1,14 @@
-<h1>Homepage</h1>
-<% @lairs.each do |lair| %>
-  <%= lair.name %>
-  <%= lair.price %>
-  <%= link_to "see more", lair_path(lair) %>
-<% end %>
+<section class="container d-flex">
+  <div class="input-group mx-auto p-5" style="width: unset">
+    <div class="form-outline">
+      <input type="search" id="form1" placeholder="Search" class="form-control" />
+    </div>
+    <button type="button" class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</section>
+
+<section class="container">
+  <%= render "card", lairs: @lairs %>
+</section>

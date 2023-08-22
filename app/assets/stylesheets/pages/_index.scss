@@ -1,2 +1,7 @@
 // Import page-specific CSS files here.
-@import "home";
+body {
+  min-height: 100svh;
+  color: white;
+  background: rgb(74,4,84);
+  background: linear-gradient(145deg, rgba(74,4,84,1) 0%, rgba(149,0,154,1) 100%);
+}
