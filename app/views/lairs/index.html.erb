@@ -1,16 +1,5 @@
-<section class="container d-flex">
-  <div class="input-group mx-auto p-5" style="width: unset">
-    <div class="form-outline">
-      <input type="search" id="form1" placeholder="Search" class="form-control" />
-    </div>
-    <button type="button" class="btn btn-primary">
-      <i class="fas fa-search"></i>
-    </button>
-  </div>
-</section>
-<%# 
-<section class="container" data-controller="toggle">
-  <div data-action="click->toggle#card" <%= link_to lair_path(lair) %>>
-    <%= render "card", lairs: @lairs %>
-  </div>
-</section> %>
+<div class="container">
+<%= render "search", lairs: @lairs %>
+
+<%= render "card", lairs: @lairs %>
+</div>

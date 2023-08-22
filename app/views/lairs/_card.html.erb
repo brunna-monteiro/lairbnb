@@ -1,10 +1,15 @@
-<div class="card" style="width: 18rem;">
-<%# Add image from backup %>
-  <div class="card-body">
-    <% @lairs.each do |lair| %>
-      <h5 class="card-title"><%= lair.name %></h5>
-      <h5 class="card-title"><%= lair.price %></h5>
-      <p class="card-text"><%= lair.description %></p>
-    <% end %>
-  </div>
+<div class="container">
+  <% @lairs.each_slice(3) do |lairs| %>
+    <div class="row">
+      <% lairs.each do |lair| %>
+        <div class="col-4 p-2" id="special-css">
+          <div class="card-css">
+        <%= cl_image_tag lair.photo.key, height: 300, width: 400, crop: :fill %>
+            <h5 class="card-title" id="title"><%= lair.name %></h5>
+            <h5 class="card-title"><%= lair.price %>🔸</h5>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
