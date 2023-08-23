@@ -1,24 +1,36 @@
-<%# <div style="--gp-section-max-width: 1120px;"></div> %>
-<%= cl_image_tag @lair.photo.key, height: 300, width: 400, crop: :fill %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="_individual_lairs.scss">
+  </head>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <h1><%= @lair.name %></h1>
-      <p><%= @lair.price %> ☠️🍏</p>
-      <p><%= @lair.description %></p>
-    </div>
-    <div class="col-md-4">
-      <h2>Make a reservation</h2>
-      <%= simple_form_for([@lair, @reservation]) do |f| %>
-      <div class="col-md-8">
-        <%= f.input :start_date, as: :date, html5: true %>
+  <div class="container">
+    <div class="row" >
+    <div class="col-md-8 mb-4">
+      <%= cl_image_tag @lair.photo.key, height: 300, width: 400, crop: :fill %>
       </div>
-      <div class="col-md-8">
-        <%= f.input :end_date, as: :date, html5: true %>
-      </div>
-        <%= f.submit 'Submit', class: 'btn btn-primary' %>
-      <% end %>
     </div>
   </div>
-</div>
+
+  <div class="container m-auto">
+    <div class="row">
+      <div class="col-md-8 rounded">
+        <h1><%= @lair.name %></h1>
+        <p><%= @lair.price %> ☠️🍎</p>
+        <p><%= @lair.description %></p>
+      </div>
+      <div class="col-md-3 bg-success rounded p-auto m-auto">
+        <h2>Make a reservation</h2>
+        <%= simple_form_for([@lair, @reservation]) do |f| %>
+        <div class="col-md-8">
+          <%= f.input :start_date, as: :date, html5: true %>
+        </div>
+        <div class="col-md-8">
+          <%= f.input :end_date, as: :date, html5: true %>
+        </div>
+          <%= f.submit 'Submit', class: 'btn btn-primary rounded' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</html>
