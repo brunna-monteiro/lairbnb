@@ -8,4 +8,6 @@ class Reservation < ApplicationRecord
       errors.add(:end_date, "must be greater than the start date")
     end
   end
+
+  
 end

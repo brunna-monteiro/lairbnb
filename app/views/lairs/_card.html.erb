@@ -1,0 +1,17 @@
+<div class="container">
+  <% @lairs.each_slice(3) do |lairs| %>
+    <div class="row" id="row-styling">
+      <% lairs.each do |lair| %>
+        <div class="col-4 p-2" id="special-css">
+          <%= link_to lair_path(lair) do %>
+            <div class="card-css">
+              <%= cl_image_tag lair.photo.key, height: 300, width: 400, crop: :fill %>
+              <h5 class="card-title" id="title"><%= lair.name %></h5>
+              <h5 class="card-title"><%= lair.price %>🔸</h5>
+             </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

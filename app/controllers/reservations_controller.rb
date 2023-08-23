@@ -1,6 +1,10 @@
 class ReservationsController < ApplicationController
+  def index
+    @reservations = Reservation.where(user_id: current_user.id)
+  end
+
   def new
-    @Reservation = Reservation.new
+    @reservation = Reservation.new
   end
 
   def create
@@ -14,6 +18,7 @@ class ReservationsController < ApplicationController
       render :new
     end
   end
+
 
   private
 
