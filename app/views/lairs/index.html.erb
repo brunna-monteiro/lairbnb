@@ -1,5 +1,11 @@
-<div class="container">
-<%= render "search", lairs: @lairs %>
+<section id="sec-1">
+  <%= render "background" %>
+</section>
+<section id="sec-2">
+  <div class="container">
 
-<%= render "card", lairs: @lairs %>
-</div>
+  <%= render "search", lairs: @lairs %>
+
+  <%= render "card", lairs: @lairs %>
+  </div>
+</section>
