@@ -42,3 +42,32 @@ body {
 #special-css a {
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 36rem) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
