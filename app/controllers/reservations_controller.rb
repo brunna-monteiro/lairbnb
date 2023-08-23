@@ -13,12 +13,11 @@ class ReservationsController < ApplicationController
     @reservation.lair = @lair
     @reservation.user = current_user
     if @reservation.save!
-      redirect_to lair_path(@lair)
+      redirect_to reservations_path
     else
       render :new
     end
   end
-
 
   private
 
