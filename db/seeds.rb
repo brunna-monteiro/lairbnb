@@ -17,7 +17,7 @@ lair1.save
 
 user2 = User.create(email: "queenofhearts@gmail.com", password: "123456", first_name: "Queen of Hearts")
 
-file2 = URI.open("https://disney.fandom.com/wiki/The_Queen_of_Hearts%27_Castle?file=-1CastleQueenOfHearts.png")
+file2 = URI.open("https://static.wikia.nocookie.net/disney/images/2/2c/-1CastleQueenOfHearts.png/revision/latest?cb=20160127162333")
 lair2 = Lair.new(name: "Queen of Hearts' Castle", user_id: user2.id, price: 600, description: "The Queen of Hearts' Castle is home to the Queen and King of Hearts. The castle is located deep within Wonderland. It is home to the Queen and King of Hearts, as well as their army of Card Soldiers, and possibly a workplace for the White Rabbit. It appears in a few scenes, especially when the Cheshire Cat shows Alice a shortcut to get to the castle. The castle is also the location where Alice was put on trial for making the Queen of Hearts lose her croquet game, as well as her patience.")
 lair2.photo.attach(io: file2, filename: "queen_of_hearts_castle", content_type: "image/png")
 lair2.save
