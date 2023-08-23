@@ -1,7 +1,29 @@
-<h1>My reservations</h1>
-<% @reservations.each do |reservation| %>
-  <% lair = Lair.find(reservation.lair_id) %>
-  <h3><%= link_to lair.name, lair_path(lair) %></h3>
-  <p><strong>start date: </strong><%= reservation.start_date %></p>
-  <p><strong>end date: </strong><%= reservation.end_date %></p>
-<% end %>
+<div class="container">
+  <h1 class="mx-auto">My reservations</h1>
+  <% index = 1 %>
+
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Lair's name</th>
+        <th scope="col">Start date</th>
+        <th scope="col">End date</th>
+        <th scope="col">Lair</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reservations.each do |reservation| %>
+        <tr>
+          <th scope="row"><%= index %></th>
+          <% index += 1 %>
+          <% lair = Lair.find(reservation.lair_id) %>
+          <td><%= lair.name %></td>
+          <td><%= reservation.start_date %></td>
+          <td><%= reservation.end_date %></td>
+          <td><%= link_to "Check the lair", lair_path(lair), class: "btn btn-outline-info btn-sm" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
