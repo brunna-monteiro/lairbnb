@@ -1,15 +1,22 @@
 
-<%# <div style="--gp-section-max-width: 1120px;"></div> %>
-<%= cl_image_tag @lair.photo.key, height: 300, width: 400, crop: :fill %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="_show.scss">
+  </head>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
+ <div class="container" id="container1">
+      <%= cl_image_tag @lair.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+
+<div class="container m-auto" id=container2>
+    <div class="row">
+      <div class="col-md-8 rounded">
       <h1><%= @lair.name %></h1>
-      <p><%= @lair.price %> ☠️🍏</p>
+      <p><%= @lair.price %> ☠️🍎 per night</p>
       <p><%= @lair.description %></p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3 rounded p-auto m-auto" id="reservations">
       <h2>Make a reservation</h2>
       <%= simple_form_for [@lair, @reservation], data: { controller: "datepicker", dates: @lair.reserved_dates.to_json }  do |f| %>
       <div class="col-md-8">
@@ -27,4 +34,3 @@
     </div>
   </div>
 </div>
-

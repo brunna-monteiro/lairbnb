@@ -1,5 +1,12 @@
-<div class="container" data-controller="search">
-<%= render "search", lairs: @lairs %>
 
-<%= render "card", lairs: @lairs %>
-</div>
+<section id="sec-1">
+  <%= render "background" %>
+</section>
+<section id="sec-2">
+  <div class="container" data-controller="search">
+
+  <%= render "search", lairs: @lairs %>
+
+  <%= render "card", lairs: @lairs %>
+  </div>
+</section>
