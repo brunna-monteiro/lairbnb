@@ -19,3 +19,32 @@ body {
 #title{
   font-family: $header-card;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 36rem) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3,9 +3,9 @@
     <div class="row">
       <% lairs.each do |lair| %>
         <div class="col-4 p-2" id="special-css">
-          <div class="card-css">
+          <div class="card-css" data-search-target="card">
         <%= cl_image_tag lair.photo.key, height: 300, width: 400, crop: :fill %>
-            <h5 class="card-title" id="title"><%= lair.name %></h5>
+            <h5 class="card-title" id="title" data-search-target="title"><%= lair.name %></h5>
             <h5 class="card-title"><%= lair.price %>🔸</h5>
         </div>
       </div>
