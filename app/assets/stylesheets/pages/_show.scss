@@ -1,19 +1,24 @@
 #container1 {
 
   box-shadow: rgba(255, 0, 179, 0.652) 0px 12px 13px, rgba(255, 0, 221, 0.805) 0px -6px 15px, rgba(219, 4, 234, 0.789) 0px 2px 3px, rgba(250, 3, 217, 0.8) 0px 6px 7px, rgba(246, 4, 238, 0.74) 0px -3px 2px;
-  padding: 10px;
-  margin: 0 auto;
+  // padding: 10px;
+  // margin: 0 auto;
   background-color: rgb(94, 1, 109);
   width: 420px;
-  margin-left: 80px;
-  margin-bottom: 70px;
+  // margin-left: 80px;
+  // margin-bottom: 70px;
   margin-top: 50px;
   border-radius: 5px;
 
   // max-width: 420px;
-  // margin-bottom: 60px;
+  margin-bottom: 50px;
   // padding-bottom: 0px;
   // padding-top: 22px;
+}
+
+#reservation_start_date, #reservation_end_date{
+  margin-top: 0;
+  width: 230px;
 }
 
 #reservations {
