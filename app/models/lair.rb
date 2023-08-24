@@ -6,7 +6,9 @@ class Lair < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true, numericality: { only_integer: true }
 
-  has_one_attached :photo
+  has_one_attached :image
+
+  validates :image, presence: true
 
   def reserved_dates
     Reservation.where(lair: self).pluck(:start_date, :end_date).map do |start_date, end_date|
