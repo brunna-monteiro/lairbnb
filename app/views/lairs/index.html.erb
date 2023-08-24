@@ -1,12 +1,23 @@
-
 <section id="sec-1">
   <%= render "background" %>
 </section>
 
-<section id="sec-2">
-  <div class="container" data-controller="search">
 
-  <%= render "search", lairs: @lairs %>
+<% if user_signed_in? %>
+  <section>
+    <div class="mt-3">
+      <h3><%= link_to "Create a lair", new_lair_path %></h3>
+    </div>
+  </section>
+<% end %>
+
+
+<section id="sec-2">
+  <%# data-controller="search" REMOVED FROM container%>
+  <div name="search" class="container">
+
+  <%# <%= render "search", lairs: @lairs %>
+  <%= render "search_pg", lairs: @lairs %>
 
   <%= render "card", lairs: @lairs %>
   </div>
