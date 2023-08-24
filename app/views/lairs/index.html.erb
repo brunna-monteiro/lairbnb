@@ -13,11 +13,10 @@
 
 
 <section id="sec-2">
-  <%# data-controller="search" REMOVED FROM container%>
-  <div name="search" class="container">
+  
+  <div name="search" class="container" data-controller="search">
 
-  <%# <%= render "search", lairs: @lairs %>
-  <%= render "search_pg", lairs: @lairs %>
+  <%= render "search", lairs: @lairs %>
 
   <%= render "card", lairs: @lairs %>
   </div>
