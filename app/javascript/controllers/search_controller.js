@@ -5,14 +5,10 @@ export default class extends Controller {
   static targets = ["filter", "card", "title"];
 
   connect() {
-    console.log(this.cardTargets)
-    console.log(this.filterTarget)
-    console.log(this.titleTarget.innerText)
 
   }
 
   filterCards(event) {
-    console.log(event.key)
     if(this.filterTarget.value !== "") {
       const filterText = this.filterTarget.value.toLowerCase();
       let i = 0
