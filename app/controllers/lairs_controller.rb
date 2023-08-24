@@ -5,6 +5,7 @@ class LairsController < ApplicationController
       @lairs = Lair.search_by_name(search)
     else
       @lairs = Lair.all
+    end
   end
 
   def new
