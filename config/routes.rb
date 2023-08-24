@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "lairs#index"
-  resources :lairs, only: [:show] do
+  resources :lairs, only: %i[show new create] do
     resources :reservations, only: %i[new create]
   end
   resources :reservations, only: [:index]
