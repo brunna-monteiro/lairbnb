@@ -3,9 +3,11 @@
   <%= render "background" %>
 </section>
 <section id="sec-2">
-  <div class="container" data-controller="search">
+  <%# data-controller="search" REMOVED FROM container%>
+  <div name="search" class="container">
 
-  <%= render "search", lairs: @lairs %>
+  <%# <%= render "search", lairs: @lairs %>
+  <%= render "search_pg", lairs: @lairs %>
 
   <%= render "card", lairs: @lairs %>
   </div>

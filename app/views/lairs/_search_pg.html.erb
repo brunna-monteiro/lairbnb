@@ -1,0 +1,14 @@
+<section class="container d-flex">
+  <div class="input-group mx-auto p-5" style="width: unset">
+    <div class="form-outline">
+      <%= form_with url: "#{root_path}#search", method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control m-0",
+              placeholder: "Filter"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary m-0" %>
+      <% end %>
+    </div>
+  </div>
+</section>
