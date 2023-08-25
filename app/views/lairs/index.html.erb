@@ -2,18 +2,8 @@
   <%= render "background" %>
 </section>
 
-
-<% if user_signed_in? %>
-  <section>
-    <div class="mt-3">
-      <h3><%= link_to "Create a lair", new_lair_path %></h3>
-    </div>
-  </section>
-<% end %>
-
-
 <section id="sec-2">
-  
+
   <div name="search" class="container" data-controller="search">
 
   <%= render "search", lairs: @lairs %>
