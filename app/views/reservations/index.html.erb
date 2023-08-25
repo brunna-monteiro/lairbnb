@@ -2,6 +2,8 @@
   <h1 class="mx-auto">My reservations</h1>
   <% index = 1 %>
 
+
+
   <table class="table table-dark table-striped">
     <thead>
       <tr>
@@ -32,4 +34,32 @@
       <% end %>
     </tbody>
   </table>
+
+  <div class="mt-5  d-flex justify-content-between">
+    <h1>My lairs</h1>
+    <p><%= link_to "Create a lair", new_lair_path, class: "btn btn-outline-info" %></h3>
+  </div>
+
+  <table class="table table-dark table-striped">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Lair's name</th>
+          <th scope="col">price</th>
+          <th scope="col">Lair</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% @lairs.each do |lair| %>
+        <tr>
+          <th scope="row"><%= index %></th>
+          <% index += 1 %>
+          <td><%= lair.name %></td>
+          <td><%= lair.price %></td>
+          <td><%= link_to "Check the lair", lair_path(lair), class: "btn btn-outline-info btn-sm" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
 </div>
