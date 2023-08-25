@@ -16,6 +16,7 @@
       <p><%= @lair.price %> ☠️🍎 per night</p>
       <p><%= @lair.description %></p>
     </div>
+  <% if user_signed_in? %>
     <div class="col-md-3 rounded p-auto m-auto" id="reservations">
       <h2>Make a reservation</h2>
       <%= simple_form_for [@lair, @reservation], data: { controller: "datepicker", dates: @lair.reserved_dates.to_json }  do |f| %>
@@ -32,5 +33,6 @@
         <%= f.submit 'Submit', class: 'btn btn-primary' %>
       <% end %>
     </div>
+  <% end %>
   </div>
 </div>
