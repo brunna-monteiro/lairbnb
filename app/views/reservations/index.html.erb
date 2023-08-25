@@ -10,6 +10,7 @@
         <th scope="col">Start date</th>
         <th scope="col">End date</th>
         <th scope="col">Lair</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -22,6 +23,11 @@
           <td><%= reservation.start_date %></td>
           <td><%= reservation.end_date %></td>
           <td><%= link_to "Check the lair", lair_path(lair), class: "btn btn-outline-info btn-sm" %></td>
+          <td>
+            <%= link_to reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
