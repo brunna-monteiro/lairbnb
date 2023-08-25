@@ -31,3 +31,15 @@
 .nav-link:hover {
   color: #00D0B5;
 }
+
+
+@media only screen and (max-width: 450px) {
+  #navbar {
+    background-color: hsla(197, 100%, 11%, 0.8);
+    border-radius: 20%;
+  }
+
+  .brand-name {
+    font-size: 90%;
+}
+}

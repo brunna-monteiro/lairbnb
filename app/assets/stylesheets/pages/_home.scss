@@ -12,18 +12,17 @@ body {
   gap: 1.6rem;
 }
 
-// /* =======RESPONSIVE DEVICES============================*/
-// @media (min-width: 200px) {
+/* =======RESPONSIVE DEVICES============================*/
 
-//   /* ======= GERAL RESPONSIVE DEVICES============================*/
-//   body {
-//       overflow: auto;
-//   }
+@media only screen and (max-width: 450px){
 
-//   #grid {
-//       // min-width: 10svh;
-//       display: grid;
-//       grid-template-columns: 1fr 1fr;
 
-//   }
-// }
+  #grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      justify-content: center;
+      --bs-gutter-x: 3.5rem;
+      padding-left: 0;
+  }
+}

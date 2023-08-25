@@ -3,7 +3,7 @@
         <div id="special-css" data-search-target="card">
           <%= link_to lair_path(lair) do %>
             <div class="card">
-              <%= cl_image_tag lair.image.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
+              <%= cl_image_tag lair.image.key, height: 300, width: 400, crop: :fill, class: "card-img-top", id: "reponsive"%>
               <div class="card-body">
                 <h5 class="card-title" id="title" data-search-target="title"><%= lair.name %></h5>
                 <h5 class="card-title" id="price"><%= lair.price %>☠️🍎</h5>

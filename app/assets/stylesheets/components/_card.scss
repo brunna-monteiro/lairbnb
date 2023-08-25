@@ -39,11 +39,16 @@
   text-decoration: none;
 }
 
-// @media (min-width: 200px) {
-//   .card {
-//     height: 35svh;
-//     width: 35svw;
-//     font-size: 70%;
 
-//   }
-// }
+@media only screen and (max-width: 450px) {
+  .card {
+    height: 35svh;
+    width: 35svw;
+    font-size: 70%;
+    max-block-size: 60%;
+  }
+
+  #responsive {
+    background-size: contain;
+  }
+}

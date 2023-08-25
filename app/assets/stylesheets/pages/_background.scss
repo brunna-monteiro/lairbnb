@@ -72,3 +72,12 @@
     opacity: 0;
   }
 }
+
+@media only screen and (max-width: 450px) {
+
+  #background-container p{
+    padding: 0;
+    margin-left: 0.8rem;
+  }
+
+}
